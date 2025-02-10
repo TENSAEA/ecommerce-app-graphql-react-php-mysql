@@ -1,0 +1,6 @@
+{
+    "require": {
+        "webonyx/graphql-php": "^15.19",
+        "firebase/php-jwt": "^6.11"
+    }
+}
