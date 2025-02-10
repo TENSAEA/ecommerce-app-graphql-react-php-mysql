@@ -98,7 +98,7 @@ function Login({ setUser, setJwt }) {
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+                        className="cursor-pointer w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
                         disabled={loading}
                     >
                         {loading ? <ClipLoader color="#fff" size={20} /> : 'Log In'}

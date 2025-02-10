@@ -44,7 +44,7 @@ function AddProduct() {
   const [image, setImage] = useState(''); // Base64 string
   const [imagePreview, setImagePreview] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
   const navigate = useNavigate();
   const imageInputRef = useRef(null); // Ref to the image input
 
@@ -54,11 +54,11 @@ function AddProduct() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    // setError('');
     setLoading(true);
 
     if (!image) {
-      setError('Please select an image.');
+      // setError('Please select an image.');
       toast.error('Please select an image!', { duration: 3000 });
       setLoading(false);
       return;
@@ -79,12 +79,12 @@ function AddProduct() {
         toast.success('Product added successfully!', { duration: 3000 });
         navigate('/ProductList'); // Redirect to product list
       } else {
-        setError('Failed to add product');
+        // setError('Failed to add product');
         toast.error('Failed to add product!', { duration: 3000 });
       }
     } catch (err) {
       console.error('Error adding product:', err);
-      setError(err.message || 'Failed to connect to the server.');
+      // setError(err.message || 'Failed to connect to the server.');
       toast.error('Failed to connect to the server.', { duration: 3000 });
     } finally {
       setLoading(false);
@@ -110,9 +110,9 @@ function AddProduct() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-xl space-y-6">
+      <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-xl space-y-6 -mt-30">
         <h2 className="text-3xl font-bold text-gray-900 text-center">Add Product</h2>
-        {error && <div className="text-red-500">{error}</div>}
+        {/* {error && <div className="text-red-500">{error}</div>} */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name:</label>
@@ -168,7 +168,7 @@ function AddProduct() {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+            className="cursor-pointer w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
             disabled={loading}
           >
             {loading ? <ClipLoader color="#fff" size={20} /> : 'Add Product'}

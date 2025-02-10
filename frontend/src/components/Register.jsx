@@ -91,7 +91,7 @@ function Register() {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+            className="cursor-pointer w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
             disabled={loading}
           >
             {loading ? <ClipLoader color="#fff" size={20} /> : 'Register'}
