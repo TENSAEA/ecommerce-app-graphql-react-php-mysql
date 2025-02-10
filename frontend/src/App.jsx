@@ -25,6 +25,8 @@ function App() {
     }
   }, []);
 
+  
+
   const handleLogout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('jwt');
@@ -32,6 +34,20 @@ function App() {
     setJwt(null);
     navigate('/login');
   };
+
+  //click logout button after 3 min automatically after login
+  useEffect(() => {
+    if(jwt){
+    const logoutTimer = setTimeout(() => {
+      handleLogout();
+    }, 180000); // 3 minutes in milliseconds
+
+    return () => {
+      clearTimeout(logoutTimer);
+    };}
+  }, [jwt]);
+
+    
 
   const isActive = (path) => {
     return location.pathname === path;
