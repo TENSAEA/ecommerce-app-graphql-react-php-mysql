@@ -77,7 +77,7 @@ function App() {
             <div className="flex items-center">
               {user ? (
                 <div className="flex items-center space-x-4">
-                  <span className="text-gray-700 font-medium">
+                  <span className="hidden sm:block text-gray-700 font-medium">
                     Welcome, {user.username}!
                   </span>
                   <button
