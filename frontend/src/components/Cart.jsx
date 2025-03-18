@@ -111,7 +111,7 @@ function Cart() {
                             </div>
                         </div>
                         <button
-                            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="cursor-pointer bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             onClick={() => handleRemoveFromCart(item.product_id)}
                         >
                             Remove
@@ -124,7 +124,7 @@ function Cart() {
                     Total: ${calculateTotal()}
                 </p>
                 <button
-                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="cursor-pointer bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     onClick={() => alert('Checkout feature will be avaliable soon!')}
                 >
                     Checkout

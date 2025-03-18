@@ -12,7 +12,7 @@ use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\Type;
 use GraphQL\GraphQL;
 use GraphQL\Error\DebugFlag;
-use GraphQL\Type\Schema;  // Add this line
+use GraphQL\Type\Schema;  
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
